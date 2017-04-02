@@ -7,7 +7,6 @@ class Main(Frame):
         super().__init__(master)
         
         self.width = master.winfo_screenwidth()
-        self.height = master.winfo_screenheight()
         
         self.pack()
         self.createWidgets()
