@@ -1,5 +1,6 @@
 # __init__.py
 
+# import tkinter module
 from tkinter import *
 
 class Time(Frame):
@@ -30,8 +31,10 @@ class Time(Frame):
         self.button = Button(self, text="Input study time")
         self.button.grid(row=2, column=1)
 
-root = Tk()
-root.title("Study Time")
-root.resizable(width=False, height=False)
-app = Time(root)
-app.mainloop()
+
+def app():
+    root = Tk()
+    root.title("Study Time")
+    root.resizable(width=False, height=False)
+    app = Time(root)
+    app.mainloop()

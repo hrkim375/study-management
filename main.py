@@ -1,5 +1,6 @@
 # main.py
 
+# import tkinter module
 from tkinter import *
 
 class Main(Frame):
@@ -17,17 +18,22 @@ class Main(Frame):
         self.menuLabel = Label(self, text="Menu")
         self.menuLabel.grid(row=0)
 
-        # menu1 Study Time
-        self.menu1 = Button(self, text="1. Input your study time", width=self.width)
-        self.menu1.grid(row=1)
+        # Study Time
+        self.studyTimeButton = Button(self, text="1. Input your study time", width=self.width, command=self.study_time)
+        self.studyTimeButton.grid(row=1)
 
-        # menu2 Schedule
-        self.menu2 = Button(self, text="2. Study schedule management", width=self.width)
-        self.menu2.grid(row=2)
+        # Schedule
+        self.scheduleButton = Button(self, text="2. Study schedule management", width=self.width)
+        self.scheduleButton.grid(row=2)
         
-        # menu3 Status
-        self.menu3 = Button(self, text="3. Print study status", width=self.width)
-        self.menu3.grid(row=3)
+        # Status
+        self.statusButton = Button(self, text="3. Print study status", width=self.width)
+        self.statusButton.grid(row=3)
+
+    def study_time(self):
+        # import study_time module and run the module
+        import study_time
+        study_time.app()
 
 root = Tk()
 root.title("Study Management")
